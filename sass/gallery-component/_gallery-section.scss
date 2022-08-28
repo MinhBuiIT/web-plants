@@ -1,0 +1,17 @@
+@use "../component/var" as *;
+@use "../component/mixin" as *;
+
+#gallery {
+    .bg {
+        height: 50vh;
+        position: relative;
+    }
+    .gallery__title {
+        position: absolute;
+        top: 50%;
+        transform: translate(6rem,-50%);
+        font-size: 7rem;
+        font-weight: 600;
+        font-family: $primary-font;
+    }
+}

@@ -1,0 +1,66 @@
+@use "../component/var" as *;
+@use "../component/mixin" as *;
+@use "../component/animation" as *;
+.nav-wrap {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    transition: 0.25s linear;
+}
+.header {
+    .navbar {
+        width: 100%;
+        background: url("../images/header-bg.png");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        @include respon(x-lg) {
+            background-size: cover;
+        }
+        @include respon(lg) {
+            padding: 1.2rem 0;
+        }
+    }
+    .navbar-brand {
+        width: 8rem;
+        margin-left: 3rem;
+    }
+    .nav-link {
+        display: inline-block;
+        font-size: 2rem;
+        margin-left: 1.9rem;
+        font-family:   $primary-font;
+        color: $bg-white;
+        font-weight: 400;
+        &:hover{
+            color: $secondary-color;
+        }
+    }
+    .navbar-toggler {
+
+        .nav-icon {
+            margin-right:auto 3rem;
+            font-size: 2.4rem;
+            color: $bg-white;
+            line-height: 4.1rem;
+        }
+        &:focus {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+    }
+    .header-right {
+        margin-right: 4rem;
+        font-size: 1.8rem;
+        margin-top: 1rem;
+        color: $bg-white;
+        font-family: $primary-font;
+        @include respon(lg) {
+            margin-left: 2.6rem;
+        }
+        
+    }
+}

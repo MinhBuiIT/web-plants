@@ -1,0 +1,69 @@
+@use "../component/var" as *;
+@use "../component/mixin" as *;
+
+.footer {
+    padding: 4rem 0;
+    background: url("../images/footer-bg/footer_bg.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $secondary-font;
+    height: auto;
+    &__row {
+        @include respon(sm) {
+            padding: 6rem 0;
+        }
+    }
+    &-col {
+        @include respon(sm) {
+            padding: 1.2rem 0;
+        }
+    }
+    h3 {
+        @include respon(sm) {
+           font-size: 1.8rem !important;
+        }
+    }
+    a {
+        font-family: $primary-font;
+        transition: all 0.2s linear;
+        &:hover {
+            color: $secondary-color !important;
+        }
+        @include respon(sm) {
+            font-size: 1.8rem !important;
+        }
+    }
+    p {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+.footer-col__icon {
+    width: 3.4rem;
+    height: 3.4rem;
+    text-decoration: none;
+    transition: 0.2s linear;
+    &:hover {
+        background-color: $secondary-color;
+    }
+}
+.footer-form {
+    input {
+        padding: 1rem 1.6rem;
+        background-color: transparent;
+        border: 1px solid #666;
+        color: #666;
+        font-weight: 600;
+        font-size: 1.7rem;
+        font-family: $primary-font;
+        margin-bottom: 1rem;
+    }
+    button {
+        min-width: fit-content;
+        max-width: 16rem;
+    }
+}

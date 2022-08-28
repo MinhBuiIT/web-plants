@@ -1,0 +1,31 @@
+@use "../component/var" as *;
+@use "../component/mixin" as *;
+
+.gallery {
+    padding: 12rem 0;
+    &-wrap {
+        div {
+            overflow: hidden;
+            height: 30rem;
+            border-radius: 8px;
+            @include respon(md) {
+                height: 25rem;
+            }
+            // @include respon(sm) {
+            //     height: 20rem;
+            // }
+        }
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            cursor: pointer;
+            border-radius: 8px;
+            transition: 0.25s linear;
+            &:hover {
+                transform: scale(1.1);
+                border-radius: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+@use "./var" as *;
+
+
+@mixin respon($num) {
+    @if $num == x-lg {
+        @media screen and (max-width: 1199px) {
+            @content;
+        }
+    }
+    @if $num == lg {
+        @media screen and (max-width: 991px) {
+            @content;
+        }
+    }
+    @if $num == md {
+        @media screen and (max-width: 767px) {
+            @content;
+        }
+    }
+    @if $num == sm {
+        @media screen and (max-width: 575px) {
+            @content;
+        }
+    }
+}
+
+@mixin gradient() {
+    background: linear-gradient(120deg,lighten($dark-color,12%) 12%,$secondary-color);
+}

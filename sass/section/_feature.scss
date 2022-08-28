@@ -1,0 +1,58 @@
+@use "../component/mixin" as *;
+@use "../component/var" as *;
+
+.feature {
+    padding: 8rem 0;
+    &-box {
+        background-color: transparent;
+        padding: 8rem 0;
+        @include respon(sm) {
+            padding: 5rem 0;
+        }
+        border: 1px solid $light-color;
+        transition: 0.2s linear;
+        margin-top: 1.4rem;
+        h3 {
+            margin-top: 1.4rem;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: $dark-color;
+            font-family: $primary-font;
+            transition: 0.2s linear;
+        }
+        &:hover {
+            background-color: $dark-color;
+            border: 1px solid transparent;
+        }
+        &:hover h3{
+            color: $bg-white;
+        }
+        &:hover .feature-box__border{
+            border-color: $secondary-color;
+        }
+    }
+}
+.feature-box__border {
+    padding: 1.2rem;
+    border-radius: 50%;
+    background-color: transparent;
+    border: 2px solid $light-color;
+    margin: auto;
+    width: fit-content;
+    transition: 0.2s linear;
+
+    &-img {
+        width: 6.5rem;
+        height: 6.5rem;
+        background-color: $light-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        margin: auto;
+        img {
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+}

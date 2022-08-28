@@ -1,0 +1,28 @@
+@use "./var" as *;
+@use "./mixin" as *;
+
+html {
+    font-size: 62.5%;   
+    font-family: $primary-font;
+    @include respon(sm) {
+        font-size: 56%;
+    }
+}
+.section-title {
+    font-family: $primary-font;
+    font-size: 3.8rem;
+    color: $dark-color;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.section-des {
+    font-family: $primary-font;
+    font-size: 1.8rem;
+    color: #666666;
+    text-transform: capitalize;
+    font-weight: 400;
+}
+.section-des.m-width {
+    max-width: 60vw;
+    margin: 0 auto;
+}

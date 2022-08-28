@@ -1,0 +1,16 @@
+@use "../component/var" as *;
+
+#product {
+    .bg {
+        height: 50vh;
+        position: relative;
+    }
+    .product__title {
+        position: absolute;
+        top: 50%;
+        transform: translate(6rem,-50%);
+        font-size: 7rem;
+        font-weight: 600;
+        font-family: $primary-font;
+    }
+}

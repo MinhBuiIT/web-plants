@@ -1,0 +1,55 @@
+@use "../component/var" as *;
+@use "../component/mixin" as *;
+
+.comment {
+    padding: 8rem 0 10rem 0;
+    background-color: lighten($secondary-color, 52%);
+    .carousel-indicators {
+        @include respon(sm) {
+            display: none;
+        }
+        bottom: -6rem;
+        button {
+            background-color: #000;
+            width: 1.2rem;
+            height: 1.2rem;
+            border-radius: 50%;
+        }
+    }
+    .carousel-inner {
+        height: auto;
+    }
+}
+.carousel-inner .carousel-item  {
+    left: 0 !important;
+}
+.comment__card {
+    max-width: 80rem;
+    margin: 2rem auto 0;
+    &-img {
+        padding: 1.4rem 1.4rem 1.4rem 1rem;
+        background-color: $dark-color;
+        img {
+            width: 100%;
+            height: 100%;
+            border-radius: 8px 4px 0px 4px;
+            object-fit: cover;
+            max-height: 30rem;
+        }
+    }
+    &-content {
+        padding: 3.5rem 2rem 0;
+        background:linear-gradient(160deg , $secondary-color,lighten($dark-color,12%));
+        p {
+            font-style: italic;
+            font-size: 1.5rem;
+            color: #333;
+            font-weight: 400;
+        }
+    }
+    &-customer {
+        font-size: 1.8rem;
+        font-weight: 700;
+        color: $dark-color;
+    }
+}

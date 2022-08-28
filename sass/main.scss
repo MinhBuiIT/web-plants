@@ -1,0 +1,33 @@
+@use "./component/button" as *;
+@use "./component/utilities" as *;
+@use "./component/typographic" as *;
+@use "./component/mixin" as *;
+@use "./component/start" as *;
+@use "./component/animation" as *;
+@use "./component/var" as *;
+
+// section
+@use "./section/nav" as *;
+@use "./section/home" as *;
+@use "./section/feature" as *;
+@use "./section/about" as *;
+@use "./section/product" as *;
+@use "./section/testimonial" as *;
+@use "./section/gallery" as *;
+@use "./section/footer" as *;
+
+// about
+@use "./about-component/banner" as *;
+@use "./about-component/about-content" as *;
+
+// product
+@use "./product-component/product-section" as *;
+@use "./product-component/product-content" as *;
+
+// gallery
+@use "./gallery-component/gallery-section" as *;
+@use "./gallery-component/gallery-content" as *;
+
+// contact
+@use "./contact-component/contact-section" as *;
+@use "./contact-component/contact-form" as *;

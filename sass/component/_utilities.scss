@@ -1,0 +1,19 @@
+@use "./var" as *;
+@use "./mixin" as *;
+.active {
+    color: $secondary-color !important;
+}
+.fixed {
+    position: fixed !important;
+    top: 5px !important;
+    left: 0 !important;
+    right: 0 !important;
+    animation: UptoDown 0.25s linear;
+}
+.column-reverse-mb {
+    @include respon(sm) {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+}
